@@ -20,10 +20,10 @@ public  class fibonachi {
 
     /** @return the number of Fibonachi sequence by it index if
      index greater or equls zero
-    @throws Exception if index less than zero*/
-    private static long getFibonachi(int i) throws Exception {
+    @throws java.lang.IllegalArgumentException if index less than zero*/
+    private static long getFibonachi(int i) throws IllegalArgumentException {
         if (i < 0)
-            throw new Exception(INVALID_ARGUMENT);
+            throw new  IllegalArgumentException(INVALID_ARGUMENT);
         if (i == 0) return 0;
         if (i <= 2) return 1;
         long n = getFibonachi(i - 1) + getFibonachi(i - 2);
@@ -31,20 +31,18 @@ public  class fibonachi {
 
     }
     /** @return the sum of even terms Fibonachi sequance, captured by limit
-     the calcuting based on Fibonachi pattern that after two odds number  followed by the even number*/
+     the calcuting based on Fibonachi pattern that after two odds number      followed by the even number*/
 
 
     public static long getFibonachiEvenSum(long limit) {
         long sum = 0;
         int index = 0;
+        long current=0;
         do {
-            try {
-                sum += getFibonachi(index);
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-            index += 3;
-        } while (sum < limit);
+                current=getFibonachi(index);
+                sum += current;
+                index += 3;
+        } while (current < limit);
 
 
         return sum;
