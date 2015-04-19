@@ -18,7 +18,7 @@ public  class fibonachi {
     static final String INVALID_ARGUMENT = "INVALID_ARGUMENT";
     static final long MAX_FIB = 4000000;
 
-    /* @return the number of Fibonachi sequence by it index if
+    /** @return the number of Fibonachi sequence by it index if
      index greater or equls zero
     @throws Exception if index less than zero*/
     private static long getFibonachi(int i) throws Exception {
@@ -30,7 +30,7 @@ public  class fibonachi {
         return n;
 
     }
-    /* @return the sum of even terms Fibonachi sequance, captured by limit
+    /** @return the sum of even terms Fibonachi sequance, captured by limit
      the calcuting based on Fibonachi pattern that after two odds number  followed by the even number*/
 
 
