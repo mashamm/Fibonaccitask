@@ -24,8 +24,7 @@ public  class fibonachi {
     private static long getFibonachi(int i) throws IllegalArgumentException {
         if (i < 0)
             throw new  IllegalArgumentException(INVALID_ARGUMENT);
-        if (i == 0) return 0;
-        if (i <= 2) return 1;
+        if (i == 0 || i == 1) return i;
         long n = getFibonachi(i - 1) + getFibonachi(i - 2);
         return n;
 
